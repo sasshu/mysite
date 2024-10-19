@@ -1,0 +1,11 @@
+:root {
+  /* --vp-c-brand-1: red; */
+  /* --vp-c-brand-2: #747bff; */
+
+  --vp-home-hero-image-background-image: -webkit-linear-gradient(
+    135deg,
+    #f6ceec 10%,
+    #d939cd 100%
+  );
+  --vp-home-hero-image-filter: blur(120px);
+}

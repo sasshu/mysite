@@ -1,28 +1,42 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "sasshusite",
+  title: "devコッコ",
   description: "sasshu's homepage",
+  lang: "ja-JP",
+  lastUpdated: true,
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    siteTitle: "devコッコ",
+    logo: "/logo.png",
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "Home", link: "/" },
+      { text: "About", link: "/about/index.md" },
+      { text: "Works", link: "/works/index.md" },
+      { text: "Examples", link: "/articles/markdown-examples" },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: "Examples",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+          { text: "Markdown Examples", link: "/articles/markdown-examples" },
+          { text: "Runtime API Examples", link: "/articles/api-examples" },
+        ],
+      },
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+    socialLinks: [{ icon: "github", link: "https://github.com/sasshu/mysite" }],
+
+    search: {
+      provider: "local",
+    },
+
+    footer: {
+      copyright: "© sasshu 2024",
+    },
+    docFooter: {
+      prev: "前のページ",
+      next: "次のページ",
+    },
+  },
+});

@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "sass-embedded": "^1.80.3",
     "vitepress": "^1.4.1"
   },
   "scripts": {
