@@ -1,12 +1,10 @@
 ---
 layout: home
 hero:
-  name: devコッコ
-  # text: コッコの成長記録
-  tagline: コッコと暮らすSalesforceエンジニアの自己満記録です。開発したアプリや備忘録を載せます。
+  name: Room sasshu
+  tagline: エンジニアとしての自己満記録です。開発したアプリや備忘録を載せます。
   image:
-    src: /image-top.png
-    # src: /logo2.png
+    src: /logo.png
     alt: コッコとパソコン
   actions:
     - theme: brand

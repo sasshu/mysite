@@ -1,12 +1,12 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
-  title: "devコッコ",
+  title: "Room sasshu",
   description: "sasshu's homepage",
   lang: "ja-JP",
   lastUpdated: true,
   themeConfig: {
-    siteTitle: "devコッコ",
+    siteTitle: "Room sasshu",
     logo: "/logo.png",
     nav: [
       { text: "Home", link: "/" },
