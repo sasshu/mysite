@@ -1,25 +1,33 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
 hero:
-  name: "sasshusite"
-  text: "sasshu's homepage"
-  tagline: My great project tagline
+  name: Room sasshu
+  tagline: エンジニアとしての自己満記録です。開発したアプリや備忘録を載せます。
+  image:
+    src: /logo.png
+    alt: コッコとパソコン
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Works
+      link: /works/index.md
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Articles
+      link: /articles/index.md
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon:
+      src: /github-logo.svg
+    title: ソースコード
+    details: アプリ開発で書いたコードはすべて載っています。
+    link: https://github.com/sasshu
+  - icon:
+      src: /zenn-logo.svg
+    title: Zennやってます
+    details: あまり投稿しないです。大きなプラットフォームなので、投稿するにはエネルギーが必要です。
+    link: https://zenn.dev/sasshu
+  - icon:
+      src: /bluesky-logo.png
+    title: ただのつぶやき
+    details: 完全プライベートです。気が抜けています。
+    link: https://bsky.app/profile/sasshu24.bsky.social
 ---
-
