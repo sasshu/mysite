@@ -6,7 +6,7 @@ const props = defineProps({
   description: String,
   video: String,
   image: String,
-  alt: String,
+  link: String,
 });
 const styles = ref({
   size: (props.size ? Number(props.size) * 100 : 100) + "%",
@@ -37,13 +37,18 @@ function pauseVideo(event: MouseEvent) {
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
     </div>
-    <div class="image-box">
+    <div class="media-box">
+      <img v-if="image" class="media-content" :src="image" />
       <video
-        class="image-content"
+        v-else-if="video"
+        class="media-content"
         :src="video"
         muted="true"
         loop="true"
       ></video>
+    </div>
+    <div v-if="link" class="link-content">
+      <a :href="link" target="_blank">詳しく見る</a>
     </div>
   </div>
 </template>
@@ -65,13 +70,17 @@ function pauseVideo(event: MouseEvent) {
     }
   }
 
-  .image-box {
+  .media-box {
     display: flex;
     justify-content: center;
-    .image-content {
+    .media-content {
       max-height: 300px;
       max-width: 80%;
     }
+  }
+
+  .link-content {
+    margin-top: 20px;
   }
 
   &:hover {

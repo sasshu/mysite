@@ -12,18 +12,18 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "About", link: "/about/index.md" },
       { text: "Works", link: "/works/index.md" },
-      { text: "Examples", link: "/articles/markdown-examples" },
+      { text: "Articles", link: "/articles/index.md" },
     ],
 
-    sidebar: [
-      {
-        text: "Examples",
-        items: [
-          { text: "Markdown Examples", link: "/articles/markdown-examples" },
-          { text: "Runtime API Examples", link: "/articles/api-examples" },
-        ],
-      },
-    ],
+    // sidebar: [
+    //   {
+    //     text: "Articles",
+    //     items: [
+    //       { text: "Markdown Examples", link: "/articles/markdown-examples" },
+    //       { text: "Runtime API Examples", link: "/articles/api-examples" },
+    //     ],
+    //   },
+    // ],
 
     socialLinks: [{ icon: "github", link: "https://github.com/sasshu/mysite" }],
 
@@ -38,5 +38,10 @@ export default defineConfig({
       prev: "前のページ",
       next: "次のページ",
     },
+
+    darkModeSwitchLabel: "テーマカラー",
+    lightModeSwitchTitle: "ライトモードに変更",
+    darkModeSwitchTitle: "ダークモードに変更",
+    externalLinkIcon: true,
   },
 });

@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Works
-      link: /works
+      link: /works/index.md
     - theme: alt
       text: Articles
-      link: /articles/api-examples
+      link: /articles/index.md
 
 features:
   - icon:
