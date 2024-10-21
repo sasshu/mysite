@@ -43,8 +43,9 @@ function pauseVideo(event: MouseEvent) {
         v-else-if="video"
         class="media-content"
         :src="video"
-        muted="true"
-        loop="true"
+        muted
+        loop
+        playsinline
       ></video>
     </div>
     <div v-if="link" class="link-content">
