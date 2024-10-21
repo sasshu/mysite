@@ -13,15 +13,17 @@ const styles = ref({
 });
 
 function playVideo(event: MouseEvent) {
-  if (event.target instanceof HTMLElement) {
-    const elem: HTMLVideoElement | null = event.target?.querySelector("video");
+  if (event.currentTarget instanceof HTMLElement) {
+    const elem: HTMLVideoElement | null =
+      event.currentTarget?.querySelector("video");
     elem?.play();
   }
 }
 
 function pauseVideo(event: MouseEvent) {
-  if (event.target instanceof HTMLElement) {
-    const elem: HTMLVideoElement | null = event.target?.querySelector("video");
+  if (event.currentTarget instanceof HTMLElement) {
+    const elem: HTMLVideoElement | null =
+      event.currentTarget?.querySelector("video");
     elem?.pause();
   }
 }
