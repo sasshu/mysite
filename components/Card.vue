@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, defineProps } from "vue";
+import { ref, defineProps, onMounted } from "vue";
+import { useData } from "vitepress";
 const props = defineProps({
   size: String,
   title: String,
@@ -10,6 +11,16 @@ const props = defineProps({
 });
 const styles = ref({
   size: (props.size ? Number(props.size) * 100 : 100) + "%",
+});
+const { isDark } = useData();
+const spinnerGif = `/spinner_${ref(isDark).value ? "dark" : "light"}.gif`;
+
+onMounted(() => {
+  // レンダリング完了後にspinnerを表示させないよう、強制的にビデオの再生と一時停止を行う
+  document.querySelectorAll("video").forEach((video) => {
+    video.play();
+    video.pause();
+  });
 });
 
 function playVideo(event: MouseEvent) {
@@ -45,9 +56,11 @@ function pauseVideo(event: MouseEvent) {
         v-else-if="video"
         class="media-content"
         :src="video"
+        :poster="spinnerGif"
         muted
         loop
         playsinline
+        preload="auto"
       ></video>
     </div>
     <div v-if="link" class="link-content">
@@ -77,8 +90,8 @@ function pauseVideo(event: MouseEvent) {
     display: flex;
     justify-content: center;
     .media-content {
-      max-height: 300px;
-      max-width: 80%;
+      max-height: 270px;
+      max-width: 85%;
     }
   }
 
