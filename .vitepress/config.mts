@@ -5,6 +5,7 @@ export default defineConfig({
   description: "sasshu's homepage",
   lang: "ja-JP",
   lastUpdated: true,
+  head: [["link", { rel: "icon", type: "image/png", href: "/logo.png" }]],
   themeConfig: {
     siteTitle: "Room sasshu",
     logo: "/logo.png",
