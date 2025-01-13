@@ -10,7 +10,9 @@ const props = defineProps({
   link: String,
 });
 const styles = ref({
-  size: (props.size ? Number(props.size) * 100 : 100) + "%",
+  size:
+    (props.size ? Number(convertFractionIntoNumber(props.size)) * 100 : 100) +
+    "%",
 });
 const { isDark } = useData();
 const spinnerGif = `/spinner_${ref(isDark).value ? "dark" : "light"}.gif`;
@@ -18,8 +20,9 @@ const spinnerGif = `/spinner_${ref(isDark).value ? "dark" : "light"}.gif`;
 onMounted(() => {
   // レンダリング完了後にspinnerを表示させないよう、強制的にビデオの再生と一時停止を行う
   document.querySelectorAll("video").forEach((video) => {
-    video.play();
-    video.pause();
+    video.play().then(() => video.pause());
+    // video.play();
+    // video.pause();
   });
 });
 
@@ -37,6 +40,18 @@ function pauseVideo(event: MouseEvent) {
       event.currentTarget?.querySelector("video");
     elem?.pause();
   }
+}
+
+function convertFractionIntoNumber(fractionString: String): Number {
+  // 分数表記の文字列を"/"で分割
+  const parts = fractionString.split("/");
+
+  if (parts.length !== 2 || Number(parts[1]) === 0) {
+    throw new Error(`分数表記でない文字列が指定されました: ${fractionString}`);
+  }
+
+  // 分子を分母で割り、小数を返す
+  return Number(parts[0]) / Number(parts[1]);
 }
 </script>
 
@@ -83,6 +98,19 @@ function pauseVideo(event: MouseEvent) {
       padding: 0;
       margin: 0;
       border: none;
+      width: 100%;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    p {
+      white-space: pre-line;
+      width: 100%;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
     }
   }
 
