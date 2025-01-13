@@ -16,16 +16,6 @@ export default defineConfig({
       { text: "Articles", link: "/articles/index.md" },
     ],
 
-    // sidebar: [
-    //   {
-    //     text: "Articles",
-    //     items: [
-    //       { text: "Markdown Examples", link: "/articles/markdown-examples" },
-    //       { text: "Runtime API Examples", link: "/articles/api-examples" },
-    //     ],
-    //   },
-    // ],
-
     socialLinks: [{ icon: "github", link: "https://github.com/sasshu/mysite" }],
 
     search: {
@@ -33,7 +23,7 @@ export default defineConfig({
     },
 
     footer: {
-      copyright: "© sasshu 2024",
+      copyright: "© sasshu 2025",
     },
     docFooter: {
       prev: "前のページ",
