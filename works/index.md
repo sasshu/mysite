@@ -20,7 +20,7 @@ import Card from '../components/Card.vue';
   <Card
     size="1/2"
     title="パネルメモ"
-    description="Chromeの拡張機能です。サイドパネルを開いてメモを取ることができます。中身はVueで作りました。現在約2000人の方にインストールしていただきました。"
+    description="Chromeの拡張機能です。サイドパネルを開いてメモを取ることができます。中身はVueで作りました。現在約3000人の方にインストールしていただきました。"
     video="/works/panelmemo.mp4"
     link="https://chromewebstore.google.com/detail/パネルメモ/jboecmpdefmkkhdbhlkgjpfliegpgcae?hl=ja"
   />
@@ -30,6 +30,20 @@ import Card from '../components/Card.vue';
     description="パスワードやよく使うテキスト等を管理できるデスクトップアプリです。ElectronとバニラJSでできています。個人的に仕事でよく使います。"
     video="/works/keypick.mp4"
     link="https://github.com/sasshu/keypick"
+  />
+  <Card
+    size="1/2"
+    title="ccsv"
+    description="編集不可、閲覧限定のCSVファイルビューアです。手軽にソートやフィルタリングができます。ElectronとVueを使用したデスクトップアプリです。"
+    video="/works/ccsv.mp4"
+    link="https://github.com/sasshu/ccsv"
+  />
+  <Card
+    size="1/2"
+    title="picpiclock"
+    description="時計やタイマーを手軽に表示・利用できるWebアプリです。ピクチャーインピクチャー機能を利用し、画面に固定表示することができます。"
+    video="/works/picpiclock.mp4"
+    link="https://sasshu.github.io/picpiclock/"
   />
 </div>
 
