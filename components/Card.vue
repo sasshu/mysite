@@ -103,6 +103,7 @@ function convertFractionIntoNumber(fractionString: String): Number {
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
+      line-clamp: 2;
     }
     p {
       white-space: pre-line;
@@ -111,6 +112,7 @@ function convertFractionIntoNumber(fractionString: String): Number {
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
+      line-clamp: 3;
     }
   }
 
